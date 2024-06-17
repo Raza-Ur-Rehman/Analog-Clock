@@ -74,13 +74,13 @@ body {
     border: 3px solid #fff;
     border-radius: 50%;
 }
-.bar-seconds span {
+#bar-seconds span {
     position: absolute;
     transform: rotate(calc(6deg * var(--i)));
     inset: -30px;
     text-align: center;
 }
-.bar-seconds span b {
+#bar-seconds span b {
     display: inline-block;
     width: 2px;
     height: 12px;
@@ -89,7 +89,7 @@ body {
     box-shadow: 0 0 10px #fff;
     transform: rotate(calc(6deg * var(--i)));
 }
-.bar-seconds span:nth-child(5n) b { 
+#bar-seconds span:nth-child(5n) b { 
     width: 6px;
     height: 18px;
     transform: translateY(1px);
