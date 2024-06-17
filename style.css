@@ -16,13 +16,29 @@ body {
     position: relative;
     width: 700px;
     height: 700px;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     border-radius: 50%;
     /* transition: 0.5s; */
 }
-#card #line {
-
-
+#circle #line {
+    position: absolute;
+    inset: 0;
+    background: #000;
+}
+#circle #line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1300px;
+    height: 200px;
+    /* background: rgb(50,125,190); */
+    background: linear-gradient(transparent, rgba(50,125,190,1),  rgb(55, 152, 207),  rgb(9, 151, 228), transparent);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    
 }
 
 
