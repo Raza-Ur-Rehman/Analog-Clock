@@ -74,6 +74,25 @@ body {
     border: 3px solid #fff;
     border-radius: 50%;
 }
+.bar-seconds span {
+    position: absolute;
+    transform: rotate(calc(var(--index) * 6deg));
+    inset: -20px;
+    text-align: center;
+}
+.bar-seconds span b {
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    background: var(--main-color);
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--main-color);
+}
+.bar-seconds span:nth-child(5n) p { 
+    width: 6px;
+    height: 18px;
+    transform: translateY(1px);
+}
 #clock span {
     position: absolute;
     inset: 20px;
@@ -81,7 +100,14 @@ body {
     text-align: center;
     transform: rotate(calc(30deg * var(--i)));
 }
-
+#clock span b {
+    font-size: 28px;
+    opacity: 0.50;
+    font-weight: 600;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+    
+}
 
 
 
