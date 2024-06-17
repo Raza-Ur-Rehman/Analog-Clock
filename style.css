@@ -67,12 +67,19 @@ body {
 }
 #clock::before {
     content: '';
-    position: relative;
+    position: absolute;
     width: 8px;
     height: 8px;
     background-color: #2F363E;
     border: 3px solid #fff;
     border-radius: 50%;
+}
+#clock span {
+    position: absolute;
+    inset: 20px;
+    color: #f9f9f9;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
 }
 
 
