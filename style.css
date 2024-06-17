@@ -55,7 +55,25 @@ body {
     border-radius: 50%;
 
 }
-
+#clock {
+    position: absolute;
+    width: 580px;
+    height: 580px;
+    background-color: #2F363E;
+    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+#clock::before {
+    content: '';
+    position: relative;
+    width: 8px;
+    height: 8px;
+    background-color: #2F363E;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
 
 
 
