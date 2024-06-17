@@ -76,19 +76,20 @@ body {
 }
 .bar-seconds span {
     position: absolute;
-    transform: rotate(calc(var(--index) * 6deg));
-    inset: -20px;
+    transform: rotate(calc(6deg * var(--i)));
+    inset: -30px;
     text-align: center;
 }
 .bar-seconds span b {
     display: inline-block;
     width: 2px;
     height: 12px;
-    background: var(--main-color);
+    background: #fff;
     border-radius: 2px;
-    box-shadow: 0 0 10px var(--main-color);
+    box-shadow: 0 0 10px #fff;
+    transform: rotate(calc(6deg * var(--i)));
 }
-.bar-seconds span:nth-child(5n) p { 
+.bar-seconds span:nth-child(5n) b { 
     width: 6px;
     height: 18px;
     transform: translateY(1px);
