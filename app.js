@@ -7,7 +7,9 @@ let handSeconds = document.getElementById('.hand3');
 let numberElement = [];
 let barElement = [];
 
-
+for (let i = 1; i<=12; i++) {
+        numberHours.innerHTML = `<span style="--i:${i};"><b>${i}</b></span>`
+}
 
 
 
