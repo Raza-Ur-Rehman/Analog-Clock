@@ -74,13 +74,13 @@ body {
     border: 3px solid #fff;
     border-radius: 50%;
 }
-#bar-seconds span {
+#clock #bar-seconds span {
     position: absolute;
     transform: rotate(calc(6deg * var(--i)));
     inset: -30px;
     text-align: center;
 }
-#bar-seconds span b {
+#clock #bar-seconds span b {
     display: inline-block;
     width: 2px;
     height: 12px;
@@ -89,7 +89,7 @@ body {
     box-shadow: 0 0 10px #fff;
     transform: rotate(calc(6deg * var(--i)));
 }
-#bar-seconds span:nth-child(5n) b { 
+#clock #bar-seconds span:nth-child(5n) b { 
     width: 6px;
     height: 18px;
     transform: translateY(1px);
@@ -111,6 +111,128 @@ body {
 }
 
 
+
+
+
+
+
+
+
+.wrapper {
+    position: absolute;
+    width: 550px;
+    height: 540px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bar-seconds,
+.number-hours {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.bar-seconds span {
+    position: absolute;
+    transform: rotate(calc(var(--index) * 6deg));
+    inset: -20px;
+    text-align: center;
+}
+.bar-seconds span p {
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    background: #f9f9f9;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #fff;
+}
+.bar-seconds span:nth-child(5n) p {
+    width: 6px;
+    height: 18px;
+    transform: translateY(1px);
+}
+.number-hours span {
+    position: absolute;
+    transform: rotate(calc(var(--index) * 30deg));
+    inset: 6px;
+    text-align: center;
+}
+.number-hours span p {
+    font-size: 52px;
+    color: #f9f9f9;
+    text-shadow: 0 0 10px #fff;
+    transform: rotate(calc(var(--index) * -30deg));
+}
+.hands-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hands-box .hand {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+.hands-box .hand i {
+    display: inline-block;
+    transform-origin: bottom;
+    border-radius: 50%;
+    box-shadow: 0 0 4px #fff;
+}
+.hands-box .hours {
+    width: 320px;
+    height: 320px;
+}
+.hands-box .hours i {
+    width: 8px;
+    height: 160px;
+    background: #ca380b;
+}
+.hands-box .minutes {
+    width: 450px;
+    height: 450px;
+}
+.hands-box .minutes::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: #0582f7;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #0582f7;
+}
+.hands-box .minutes i {
+    width: 8px;
+    height: 225px;
+    background: #0582f7;
+}
+.hands-box .seconds {
+    width: 480px;
+    height: 480px;
+}
+.hands-box .seconds::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: #FFF;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+.hands-box .seconds i {
+    width: 4px;
+    height: calc(240px + 70px); /* 240px car le parent est de 480 */
+    background: white;
+    box-shadow: none;
+}
 
 
 
