@@ -16,6 +16,9 @@ body {
     position: relative;
     width: 600px;
     height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* background-color: aliceblue; */
     /* transition: 0.5s; */
 }
@@ -25,6 +28,9 @@ body {
     border-radius: 50%;
     background: #000;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #circle #line::before {
     content: '';
@@ -38,6 +44,7 @@ body {
     /* background: rgb(50,125,190); */
     background: linear-gradient(transparent, rgba(50,125,190,1),  rgb(55, 152, 207),  rgb(9, 151, 228), transparent);
     animation: animate 10s linear infinite;
+    
 }
 @keyframes animate {
      0% {
@@ -53,9 +60,8 @@ body {
     inset: 3px;
     background: #292929;
     border-radius: 50%;
-
 }
-#clock {
+/* #clock {
     position: absolute;
     width: 580px;
     height: 580px;
@@ -108,7 +114,7 @@ body {
     display: inline-block;
     transform: rotate(calc(-30deg * var(--i)));
     
-}
+} */
 
 
 
